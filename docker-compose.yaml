@@ -35,7 +35,7 @@ services:
   gatewayservice:
     build: ./gatewayservice
     container_name: gateway
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "3000:3000"
     env_file: .env  
@@ -47,7 +47,7 @@ services:
   auth-service:
     build: ./Locate360-Backend-AuthService
     container_name: auth-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4001:4001"
     env_file: .env  
@@ -58,7 +58,7 @@ services:
   customer-service:
     build: ./Locate360-Backend-CustomerService
     container_name: customer-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/ Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4002:4002"
     env_file: .env  
@@ -69,7 +69,7 @@ services:
   user-service:
     build: ./Locate360-Backend-UserService
     container_name: user-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4011:4011"
     env_file: .env  
@@ -80,7 +80,7 @@ services:
   vendor-service:
     build: ./Locate360-Backend-VendorService
     container_name: vendor-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4003:4003"
     env_file: .env  
@@ -91,7 +91,7 @@ services:
   lead-service:
     build: ./Locate360-Backend-LeadService
     container_name: lead
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4004:4004"
     env_file: .env  
@@ -102,7 +102,7 @@ services:
   field-service:
     build: ./Locate360-Backend-FieldService
     container_name: field
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4005:4005"
     env_file: .env  
@@ -113,7 +113,7 @@ services:
   telecaller-service:
     build: ./Locate360-Backend-TelecallerService
     container_name: telecaller-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4006:4006"
     env_file: .env  
@@ -124,7 +124,7 @@ services:
   notification-service:
     build: ./Locate360-Backend-NotificationService
     container_name: notification-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4007:4007"
     env_file: .env  
@@ -135,7 +135,7 @@ services:
   search-service:
     build: ./Locate360-Backend-SearchService
     container_name: search-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4008:4008"
     env_file: .env  
@@ -146,7 +146,7 @@ services:
   storage-service:
     build: ./Locate360-Backend-StorageService
     container_name: storage-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4009:4009"
     env_file: .env  
@@ -157,7 +157,7 @@ services:
   admin-service:
     build: ./Locate360-Backend-AdminService
     container_name: admin-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4010:4010"
     env_file: .env  
@@ -168,7 +168,7 @@ services:
   realtime-service:
     build: ./Locate360-Backend-RealtimeService
     container_name: realtime-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4015:4015"
     env_file: .env  
@@ -180,7 +180,7 @@ services:
   aggregation-service:
     build: ./Locate360-Backend-AggregationService
     container_name:  aggregation-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4014:4014"
     env_file: .env  
@@ -192,7 +192,7 @@ services:
   support-service:
     build: ./Locate360-Backend-SupportService
     container_name:  support-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image:"13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4012:4012"
     env_file: .env
@@ -204,7 +204,7 @@ services:
   audit-service:
     build: ./Locate360-Backend-AuditService
     container_name:  audit-service
-    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    image: "13.201.3.250/Locate360/${params.IMAGE_NAME}:latest"
     ports:
       - "4016:4016"
     env_file: .env
