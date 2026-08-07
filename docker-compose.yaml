@@ -165,8 +165,9 @@ services:
       - kafka
   
   aggregation-service:
-    build: .
+    build: ./Locate360-Backend-AggregationService
     container_name:  aggregation-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4014:4014"
     depends_on:
