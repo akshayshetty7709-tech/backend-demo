@@ -176,7 +176,7 @@ services:
       - kafka
   
   support-service:
-    build: ././Locate360-Backend-AggregationService
+    build: ./Locate360-Backend-SupportService
     container_name:  support-service
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
