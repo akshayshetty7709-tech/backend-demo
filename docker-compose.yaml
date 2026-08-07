@@ -202,7 +202,7 @@ services:
       - kafka 
   
   audit-service:
-    build: .
+    build: ./Locate360-Backend-AuditService
     container_name:  audit-service
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
