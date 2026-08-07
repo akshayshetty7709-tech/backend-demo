@@ -35,6 +35,7 @@ services:
   gatewayservice:
     build: ./gatewayservice
     container_name: gateway
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "3000:3000"
     depends_on:
@@ -45,6 +46,7 @@ services:
   auth-service:
     build: ./Locate360-Backend-AuthService
     container_name: auth-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4001:4001"
     depends_on:
@@ -54,6 +56,7 @@ services:
   customer-service:
     build: ./Locate360-Backend-CustomerService
     container_name: customer-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4002:4002"
     depends_on:
@@ -63,6 +66,7 @@ services:
   user-service:
     build: ./Locate360-Backend-UserService
     container_name: user-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4011:4011"
     depends_on:
@@ -72,6 +76,7 @@ services:
   vendor-service:
     build: ./Locate360-Backend-VendorService
     container_name: vendor-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4003:4003"
     depends_on:
@@ -81,6 +86,7 @@ services:
   lead-service:
     build: ./Locate360-Backend-LeadService
     container_name: lead
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4004:4004"
     depends_on:
@@ -90,6 +96,7 @@ services:
   field-service:
     build: ./Locate360-Backend-FieldService
     container_name: field
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4005:4005"
     depends_on:
@@ -99,6 +106,7 @@ services:
   telecaller-service:
     build: ./Locate360-Backend-TelecallerService
     container_name: telecaller-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4006:4006"
     depends_on:
@@ -108,6 +116,7 @@ services:
   notification-service:
     build: ./Locate360-Backend-NotificationService
     container_name: notification-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4007:4007"
     depends_on:
@@ -117,6 +126,7 @@ services:
   search-service:
     build: ./Locate360-Backend-SearchService
     container_name: search-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4008:4008"
     depends_on:
@@ -126,6 +136,7 @@ services:
   storage-service:
     build: ./Locate360-Backend-StorageService
     container_name: storage-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4009:4009"
     depends_on:
@@ -135,6 +146,7 @@ services:
   admin-service:
     build: ./Locate360-Backend-AdminService
     container_name: admin-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4010:4010"
     depends_on:
@@ -144,6 +156,7 @@ services:
   realtime-service:
     build: ./Locate360-Backend-RealtimeService
     container_name: realtime-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4015:4015"
     depends_on:
