@@ -38,6 +38,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "3000:3000"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -49,6 +50,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4001:4001"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -59,6 +61,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4002:4002"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -69,6 +72,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4011:4011"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -79,6 +83,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4003:4003"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -89,6 +94,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4004:4004"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -99,6 +105,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4005:4005"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -109,6 +116,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4006:4006"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -119,6 +127,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4007:4007"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -129,6 +138,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4008:4008"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -139,6 +149,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4009:4009"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -149,6 +160,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4010:4010"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -159,6 +171,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4015:4015"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -170,6 +183,7 @@ services:
     image: myregistry.io/myorg/auth-service:${TAG:-latest}
     ports:
       - "4014:4014"
+    env_file: .env  
     depends_on:
       - mongo
       - redis
@@ -186,6 +200,18 @@ services:
       - mongo
       - redis
       - kafka 
+  
+  audit-service:
+    build: .
+    container_name:  audit-service
+    image: myregistry.io/myorg/auth-service:${TAG:-latest}
+    ports:
+      - "4016:4016"
+    env_file: .env
+    depends_on:
+      - mongo
+      - redis
+      - kafka  
 
 volumes:
   mongo_data:
