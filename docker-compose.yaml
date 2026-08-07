@@ -163,5 +163,16 @@ services:
       - mongo
       - redis
       - kafka
+  
+  aggregation-service:
+    build: .
+    container_name:  aggregation-service
+    ports:
+      - "4014:4014"
+    depends_on:
+      - mongo
+      - redis
+      - kafka
+
 volumes:
   mongo_data:
